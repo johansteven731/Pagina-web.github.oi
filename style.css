@@ -1,0 +1,586 @@
+
+/* =====================================
+   1. CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17394c;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.seccion {
+    padding: 80px 8%;
+}
+
+.subtitulo {
+    color: #16a6ad;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.titulo-seccion h2,
+.texto-nosotros h2,
+.contacto h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #123448;
+}
+
+/* =====================================
+   2. ENCABEZADO Y MENÚ
+===================================== */
+
+.encabezado {
+    background-color: #092d43;
+    color: white;
+    min-height: 78px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    color: #e8f4f6;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #4de0dc;
+}
+
+.botones-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton-login,
+.boton-registro {
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.boton-login {
+    color: white;
+    border: 1px solid #ffffff80;
+}
+
+.boton-registro {
+    background-color: #16a6ad;
+    color: white;
+}
+
+/* =====================================
+   3. PORTADA PRINCIPAL
+===================================== */
+
+
+.portada {
+    min-height: 600px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 35, 51, 0.80),
+            rgba(4, 35, 51, 0.15)
+        ),
+        url("imagenes/fondo-principal.jpg");
+
+    background-color: #0b596a;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.texto-portada {
+    color: white;
+    max-width: 580px;
+}
+
+.texto-portada .subtitulo {
+    color: #65e3dd;
+}
+
+.texto-portada h1 {
+    font-size: clamp(45px, 6vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.texto-portada p:not(.subtitulo) {
+    max-width: 480px;
+    font-size: 17px;
+    margin-bottom: 28px;
+    color: #f0f8fa;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #16a6ad;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton:hover {
+    background-color: #10868d;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   4. BENEFICIOS
+===================================== */
+
+.beneficios {
+    background-color: #f4fafb;
+}
+
+.contenedor-beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.beneficio {
+    background-color: white;
+    text-align: center;
+    padding: 32px 24px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(13, 53, 71, 0.07);
+}
+
+.icono {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.beneficio h3 {
+    color: #123448;
+    margin-bottom: 10px;
+}
+
+.beneficio p {
+    color: #627784;
+    font-size: 15px;
+}
+
+/* =====================================
+   5. CATÁLOGO DE PRODUCTOS
+===================================== */
+
+.productos {
+    background-color: white;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 1px solid #e5eef0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(13, 53, 71, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(13, 53, 71, 0.12);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+}
+
+.etiqueta {
+    color: #139da5;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.contenido-tarjeta h3 {
+    margin: 8px 0;
+    color: #123448;
+    font-size: 21px;
+}
+
+.contenido-tarjeta p {
+    color: #627784;
+    font-size: 14px;
+}
+
+.contenido-tarjeta .precio {
+    color: #118b92;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+/* =====================================
+   6. SOBRE NOSOTROS
+===================================== */
+
+.nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    background-color: #eff8f9;
+}
+
+.imagen-nosotros img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.texto-nosotros h2 {
+    margin-bottom: 22px;
+}
+
+.texto-nosotros p:not(.subtitulo) {
+    color: #526d7b;
+    margin-bottom: 18px;
+}
+
+.texto-nosotros .boton {
+    margin-top: 8px;
+}
+
+/* =====================================
+   7. CONTACTO
+===================================== */
+
+.contacto {
+    padding: 75px 8%;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #0b344b, #087c87);
+}
+
+.contacto .subtitulo {
+    color: #70e1dc;
+}
+
+.contacto h2 {
+    color: white;
+}
+
+.contacto p:not(.subtitulo) {
+    margin: 0 auto 25px;
+    max-width: 650px;
+    color: #e0f0f2;
+}
+
+.boton-claro {
+    background-color: white;
+    color: #0b5366;
+}
+
+.boton-claro:hover {
+    background-color: #e6f7f7;
+}
+
+/* =====================================
+   8. PIE DE PÁGINA
+===================================== */
+
+.pie {
+    background-color: #062638;
+    color: #d4e4e9;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.pie .logo {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.pie p {
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #ffffff20;
+    color: #a9c0c9;
+}
+
+/* =====================================
+   9. FORMULARIOS DE ACCESO
+===================================== */
+
+
+.fondo-formulario {
+    min-height: 100vh;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(235, 249, 250, 0.72),
+            rgba(235, 249, 250, 0.82)
+        ),
+        url("imagenes/fondo-acceso.jpg");
+
+    background-color: #e9f7f8;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.logo-formulario {
+    color: #0b5267;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.caja-formulario {
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(8, 48, 66, 0.12);
+}
+
+.caja-formulario h1 {
+    color: #123448;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.descripcion-formulario {
+    color: #687e89;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.grupo-campo {
+    margin-bottom: 18px;
+}
+
+.grupo-campo label {
+    display: block;
+    color: #23495b;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.grupo-campo input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbdde2;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    background-color: #fbfefe;
+}
+
+.grupo-campo input:focus {
+    border-color: #16a6ad;
+    box-shadow: 0 0 0 3px #16a6ad20;
+}
+
+.boton-formulario {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.enlaces-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+.enlaces-formulario a {
+    color: #118b92;
+    font-weight: bold;
+}
+
+.volver-inicio {
+    margin-top: 22px;
+    color: #526d7b;
+    font-size: 14px;
+}
+
+/* =====================================
+   10. ADAPTACIÓN A TABLET Y CELULAR
+===================================== */
+
+@media (max-width: 1050px) {
+    .encabezado {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .contenedor-productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .encabezado {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .botones-menu {
+        justify-content: center;
+    }
+
+    .portada {
+        min-height: 480px;
+        padding: 65px 7%;
+        background-position: center;
+    }
+
+    .texto-portada h1 {
+        font-size: 46px;
+    }
+
+    .texto-portada p:not(.subtitulo) {
+        font-size: 15px;
+    }
+
+    .seccion {
+        padding: 55px 7%;
+    }
+
+    .titulo-seccion h2,
+    .texto-nosotros h2,
+    .contacto h2 {
+        font-size: 29px;
+    }
+
+    .contenedor-beneficios,
+    .contenedor-productos,
+    .nosotros {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-nosotros img {
+        height: 260px;
+    }
+
+    .tarjeta img {
+        height: 230px;
+    }
+
+    .caja-formulario {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .boton-login,
+    .boton-registro {
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+}
